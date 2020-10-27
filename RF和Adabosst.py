@@ -27,7 +27,7 @@ def call_RF(X_train, y_train, X_test, n_ets, max_d):
 	# X_test 标准化，归一化后的测试集df
 	# n_ets 常用范围60-130
 	# max_d 常用范围7-25
-	# 返回测试集上的预测结果，一个序列
+	# 返回测试集上的基于随机森林算法预测结果，一个序列
 	from sklearn.ensemble import RandomForestRegressor
     forest = RandomForestRegressor(n_estimators=n_ets, random_state=1, max_depth=max_d)
     Forest = forest.fit(X_train, y_train.values.ravel())
@@ -41,7 +41,7 @@ def call_Ada_rand(X_train, y_train, X_test, n_ets1,n_ets2):
 	# X_test 标准化，归一化后的测试集df
 	# n_ets1 常用范围60-130
 	# n_ets1 常用范围60-130
-	# 返回测试集上的预测结果，一个序列
+	# 返回测试集上的基于Adaboost算法预测结果，一个序列
 	from sklearn.ensemble import AdaBoostRegressor
 	clf_adaboost_rand = AdaBoostRegressor(RandomForestRegressor(n_estimators=n_ets1), n_estimators=n_ets2, random_state=1)
     AdaBoost_rand = clf_adaboost_rand.fit(X_train, y_train.values.ravel())
