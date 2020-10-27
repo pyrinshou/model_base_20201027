@@ -1,4 +1,5 @@
 
+
 def standard(df_ins, s_type='ftf'):
 	# s_type='ftf' ，基于均值和方差将训练数据转为标准正态分布
 	# s_type='tf'  ，直接将训练数据转为标准正态分布
