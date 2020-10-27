@@ -11,7 +11,7 @@ def standard(df_ins, s_type='ftf'):
 	elif s_type='tf': 
 		df_ins = scaler.transform(df_ins)
 	else:
-		pass
+		df_ins = None
 	return df_ins
 	
 def normalization(df_ins):
