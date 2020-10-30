@@ -65,7 +65,7 @@ def pridict_by_arimax(train_series, test_series, num):
 
 def pridict_by_arimax2(train_x_series, train_y_series, test_x_series, num):
     '''
-    :param train_x_series: 训练集数据序列
+    :param train_x_series: 训练集特征序列
     :param train_y_series: 训练集目标值序列
     :param test_x_series: 测试集序列
     :param num: 预测期数
