@@ -23,6 +23,7 @@ def normalization(df_ins):
 
 def call_RF(X_train, y_train, X_test, n_ets, max_d):
 	'''
+	:： 应用随机森林算法，对训练集数据建模并对测试集数据进行验证，返回一个格式为series的预测结果
 	:param X_train： 标准化，归一化后的训练集df
 	:param y_train: 标准化，归一化后的训练集df
 	:param X_test: 标准化，归一化后的测试集df
