@@ -37,6 +37,7 @@ num = 3
 key = '时间'
 value = '用电量'
 table3 = trans(table2, 3, '时间', '用电量')
+
 # table3结果为
 '''
 日期         商圈名称              时间         用电量
