@@ -1,3 +1,6 @@
+# coding: utf-8
+# author: cyy
+
 def trans(df,num,key,value):
 	# 1.功能说明
 	# 对df的指定列进行转置
