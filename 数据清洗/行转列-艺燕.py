@@ -1,5 +1,5 @@
 def trans(df,num,key,value):
-	# 1.函数功能说明
+	# 1.功能说明
 	# 对df的指定列进行转置
 	
 	# 2.参数说明
@@ -11,18 +11,18 @@ def trans(df,num,key,value):
 	:return: 返回一个新的DataFrame 
 	''' 
 	
-	# 3.函数内部导包 
+	# 3.导包 
 	import pandas as pd
 	
 	# 4.处理过程 
-  list_name = list(df)
-  df_new = df.set_index(list_name[0:num-1],drop=True)
-  df_new = df_new.stack(dropna=False)
-  df_new = df_new.reset_index()
-  df_new = df_new.rename(columns={'level_2': key, 0: value})
+  	list_name = list(df)
+  	df_new = df.set_index(list_name[0:num-1],drop=True)
+	df_new = df_new.stack(dropna=False)
+	df_new = df_new.reset_index()
+	df_new = df_new.rename(columns={'level_2': key, 0: value})
 	
 	# 5.结果
-  return df_new
+  	return df_new
 
 
 # 测试
