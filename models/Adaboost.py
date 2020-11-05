@@ -16,15 +16,15 @@ def adab(X_train, y_train, X_test, n_ets1, n_ets2):
 	
 	# 3.导包 
 	from sklearn.ensemble import RandomForestRegressor   
-  from sklearn.ensemble import AdaBoostRegressor
+  	from sklearn.ensemble import AdaBoostRegressor
 	
 	# 4.处理过程 
-  clf_adaboost_rand = AdaBoostRegressor(RandomForestRegressor(n_estimators=n_ets1), n_estimators=n_ets2, random_state=1)
-  AdaBoost_rand = clf_adaboost_rand.fit(X_train, y_train.values.ravel())
-  y_predict_AdaB_rand = AdaBoost_rand.predict(X_test)
+  	clf_adaboost_rand = AdaBoostRegressor(RandomForestRegressor(n_estimators=n_ets1), n_estimators=n_ets2, random_state=1)
+	AdaBoost_rand = clf_adaboost_rand.fit(X_train, y_train.values.ravel())
+	y_predict_AdaB_rand = AdaBoost_rand.predict(X_test)
 	
 	# 5.结果
-  return y_predict_AdaB_rand
+  	return y_predict_AdaB_rand
 
 
 ########## 测试 #########
