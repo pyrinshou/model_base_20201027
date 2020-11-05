@@ -1,5 +1,6 @@
 # coding: utf-8
 
+
 def adab(X_train, y_train, X_test, n_ets1, n_ets2):
 	# 1.功能说明
 	# 用Adaboost算法对X_train建模，输出数据集X_test上的模型预测结果，一个序列
