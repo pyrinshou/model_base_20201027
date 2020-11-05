@@ -19,8 +19,8 @@ def rf(X_train, y_train, X_test, n_ets, max_d):
 	
 	# 4.处理过程 
   	forest = RandomForestRegressor(n_estimators=n_ets, random_state=1, max_depth=max_d)
-    Forest = forest.fit(X_train, y_train.values.ravel())
-    y_predict_fore = Forest.predict(X_test)
+    	Forest = forest.fit(X_train, y_train.values.ravel())
+    	y_predict_fore = Forest.predict(X_test)
 	
 	# 5.结果
   	return y_predict_fore
