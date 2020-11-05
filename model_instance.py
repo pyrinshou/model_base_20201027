@@ -21,3 +21,25 @@ def pridict_by_arimax(train_series, test_series, num):
     
     # 5.函数结果
     return pre_val[0]
+
+
+
+########## 测试 #########    
+# train_series
+	'''
+	2019-12-01	52590.00
+	2020-01-01	62585.55
+	'''
+# test_series
+	'''
+	2020-02-01 00:00:00	np.nan
+	2020-03-01 00:00:00	np.nan
+	'''
+num = 2
+result = pridict_by_arimax(train_series, test_series, num)
+
+# result：
+'''
+2020-02-01 00:00:00	57590.00
+2020-03-01 00:00:00	61595.55
+'''
